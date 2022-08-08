@@ -1,0 +1,103 @@
+graphdg]$ python scripts/run.py --train_path=/scratch/zkarim2s/graphdg/iso17_split-0_train.pkl --test_path=/scratch/zkarim2s/graphdg/iso17_split-0_test.pkl
+
+WARNING: The TensorFlow contrib module will not be included in TensorFlow 2.0.
+For more information, please see:
+  * https://github.com/tensorflow/community/blob/master/rfcs/20180907-contrib-sunset.md
+  * https://github.com/tensorflow/addons
+If you depend on functionality not listed there, please file an issue.
+
+2022-08-06 04:28:28.424 INFO: {
+    "augmentation": 1,
+    "batch_size": 32,
+    "decoder_depth": 2,
+    "decoder_width": 50,
+    "edge_core_depth": 2,
+    "edge_core_width": 50,
+    "edge_encoder_depth": 2,
+    "edge_encoder_width": 50,
+    "hidden_feats_edges": 10,
+    "hidden_feats_nodes": 10,
+    "latent_dims": 1,
+    "load_model": false,
+    "log_dir": "logs",
+    "log_level": "INFO",
+    "loss_threshold": 10,
+    "max_num_epochs": 100,
+    "model_dir": "models",
+    "name": "graphdg",
+    "node_core_depth": 2,
+    "node_core_width": 50,
+    "node_encoder_depth": 2,
+    "node_encoder_width": 50,
+    "num_core_models": 3,
+    "num_samples": 100,
+    "results_dir": "results",
+    "seed": 0,
+    "test_path": "/scratch/zkarim2s/graphdg/iso17_split-0_test.pkl",
+    "train_path": "/scratch/zkarim2s/graphdg/iso17_split-0_train.pkl",
+    "valid_fraction": 0.2,
+    "xyz_dir": "xyz"
+}
+2022-08-06 04:28:28.426 INFO: Loading training and test datasets
+2022-08-06 04:40:49.535 INFO: Dataset sizes: 354514 train, 30 test
+2022-08-06 04:42:59.165 INFO: Graph input dimensions: GraphFeatureDimensions(edges=21, nodes=12, globals=0)
+2022-08-06 04:43:02.063984: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: SSE4.1 SSE4.2 AVX AVX2 FMA
+2022-08-06 04:43:02.075830: I tensorflow/core/platform/profile_utils/cpu_utils.cc:94] CPU Frequency: 2599740000 Hz
+2022-08-06 04:43:02.081358: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x5582590b1680 executing computations on platform Host. Devices:
+2022-08-06 04:43:02.081413: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): <undefined>, <undefined>
+2022-08-06 04:43:02.275432: I tensorflow/compiler/xla/service/service.cc:150] XLA service 0x55825a070350 executing computations on platform CUDA. Devices:
+2022-08-06 04:43:02.275490: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (0): Tesla K80, Compute Capability 3.7
+2022-08-06 04:43:02.275503: I tensorflow/compiler/xla/service/service.cc:158]   StreamExecutor device (1): Tesla K80, Compute Capability 3.7
+2022-08-06 04:43:02.275804: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 0 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:84:00.0
+totalMemory: 11.92GiB freeMemory: 11.86GiB
+2022-08-06 04:43:02.275883: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1433] Found device 1 with properties: 
+name: Tesla K80 major: 3 minor: 7 memoryClockRate(GHz): 0.8235
+pciBusID: 0000:85:00.0
+totalMemory: 11.92GiB freeMemory: 11.86GiB
+2022-08-06 04:43:02.276198: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1512] Adding visible gpu devices: 0, 1
+2022-08-06 04:43:02.279058: I tensorflow/core/common_runtime/gpu/gpu_device.cc:984] Device interconnect StreamExecutor with strength 1 edge matrix:
+2022-08-06 04:43:02.279095: I tensorflow/core/common_runtime/gpu/gpu_device.cc:990]      0 1 
+2022-08-06 04:43:02.279113: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 0:   N Y 
+2022-08-06 04:43:02.279129: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1003] 1:   Y N 
+2022-08-06 04:43:02.279290: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:0 with 11540 MB memory) -> physical GPU (device: 0, name: Tesla K80, pci bus id: 0000:84:00.0, compute capability: 3.7)
+2022-08-06 04:43:02.279921: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1115] Created TensorFlow device (/job:localhost/replica:0/task:0/device:GPU:1 with 11540 MB memory) -> physical GPU (device: 1, name: Tesla K80, pci bus id: 0000:85:00.0, compute capability: 3.7)
+/home/zkarim2s/anaconda3/envs/zain_gd/lib/python3.7/site-packages/tensorflow/python/ops/gradients_impl.py:110: UserWarning: Converting sparse IndexedSlices to a dense Tensor of unknown shape. This may consume a large amount of memory.
+  "Converting sparse IndexedSlices to a dense Tensor of unknown shape. "
+2022-08-06 04:43:16.402 INFO: Number of trainable variables: 106046
+2022-08-06 04:43:22.283230: I tensorflow/stream_executor/dso_loader.cc:152] successfully opened CUDA library libcublas.so.10.0 locally
+2022-08-06 04:50:41.380 INFO: Epoch: 0, loss: -5882670.9414
+2022-08-06 04:57:59.102 INFO: Epoch: 1, loss: -6054539.7346
+2022-08-06 05:05:01.593 INFO: Epoch: 2, loss: -5679864.4171
+2022-08-06 05:11:57.388 INFO: Epoch: 3, loss: -6007094.1548
+2022-08-06 05:18:53.499 INFO: Epoch: 4, loss: -6984845.8984
+2022-08-06 05:26:04.694 INFO: Epoch: 5, loss: -6043171.9295
+2022-08-06 05:32:53.381 INFO: Epoch: 6, loss: -7188125.7514
+2022-08-06 05:39:39.418 INFO: Epoch: 7, loss: -7002107.2806
+2022-08-06 05:46:17.133 INFO: Epoch: 8, loss: -7224621.2811
+2022-08-06 05:53:09.694 INFO: Epoch: 9, loss: -5117727.8596
+2022-08-06 06:00:08.454 INFO: Epoch: 10, loss: -5991909.7555
+2022-08-06 06:07:27.670 INFO: Epoch: 11, loss: -7424740.0365
+2022-08-06 06:14:20.689 INFO: Epoch: 12, loss: -6696604.4969
+2022-08-06 06:20:38.133 INFO: Epoch: 13, loss: -7436353.3245
+2022-08-06 06:26:55.731 INFO: Epoch: 14, loss: -7196579.3342
+2022-08-06 06:32:59.066 INFO: Epoch: 15, loss: -7323192.7719
+2022-08-06 06:39:08.775 INFO: Epoch: 16, loss: -5651966.6739
+2022-08-06 06:45:31.932 INFO: Epoch: 17, loss: -6277846.0735
+2022-08-06 06:51:34.837 INFO: Epoch: 18, loss: -2815285.5568
+2022-08-06 06:57:50.073 INFO: Epoch: 19, loss: -5830259.6454
+2022-08-06 07:05:27.392 INFO: Epoch: 20, loss: -6980369.8438
+2022-08-06 07:12:23.925 INFO: Epoch: 21, loss: -5879701.8628
+2022-08-06 07:18:08.450 INFO: Epoch: 22, loss: -3249360.0947
+2022-08-06 07:24:04.923 INFO: Epoch: 23, loss: -7228232.3667
+2022-08-06 07:30:24.561 INFO: Epoch: 24, loss: -3594891.8275
+2022-08-06 07:30:26.845 INFO: Lowest loss: -7436353.3245
+2022-08-06 07:30:26.869 INFO: Training statistics: {'trainable_parameters': 106046, 'valid_losses': [-5882670.941441615, -6054539.734641328, -5679864.417071331, -6007094.154753742, -6984845.898354528, -6043171.9295307305, -7188125.751369867, -7002107.280560307, -7224621.281061337, -5117727.859595113, -5991909.755459775, -7424740.036460952, -6696604.49691493, -7436353.324500271, -7196579.334150817, -7323192.771906792, -5651966.673887918, -6277846.07352311, -2815285.5567542776, -5830259.645358154, -6980369.843834979, -5879701.862773156, -3249360.094713119, -7228232.366677997, -3594891.82752052]}
+2022-08-06 07:30:27.399 INFO: Test statistics: {'test_loss': -2897.1258938083884, 'error': {'max_abs': 0.7950531209592961, 'median': 0.008750709139045298, 'median_abs': 0.04267908956438715, 'mean': 0.0077527206674899455, 'mean_abs': 0.0650751619367225, 'mean_squared': 0.01031020197566, 'std': 0.10124276417557886, 'se': 0.0016684842133859916}, 'variance': {'max_abs': 0.14604890424241349, 'median': 0.004640978702706961, 'median_abs': 0.004640978702706961, 'mean': 0.007323260194907324, 'mean_abs': 0.007323260194907324, 'mean_squared': 0.0002731635862675117, 'std': 0.014816661107860894, 'se': 0.00024417908138781567}}
+2022-08-06 07:30:27.425 INFO: Attempting to generate 100 sample(s) for each molecule in test set
+/home/zkarim2s/anaconda3/envs/zain_gd/lib/python3.7/site-packages/numpy/core/fromnumeric.py:86: VisibleDeprecationWarning: Creating an ndarray from ragged nested sequences (which is a list-or-tuple of lists-or-tuples-or ndarrays with different lengths or shapes) is deprecated. If you meant to do this, you must specify 'dtype=object' when creating the ndarray.
+  return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+2022-08-06 07:31:11.417 INFO: Sample statistics: {'max_abs': 100, 'median': 100.0, 'median_abs': 100.0, 'mean': 100.0, 'mean_abs': 100.0, 'mean_squared': 10000.0, 'std': 0.0, 'se': 0.0}
+2022-08-06 07:31:11.421 INFO: Writing samples to XYZ
+
