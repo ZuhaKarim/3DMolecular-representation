@@ -1,0 +1,105 @@
+\documentclass[12pt]{osa-supplemental-document}
+\setboolean{shortarticle}{false}
+
+\title{Communication: Understanding molecular
+representations in machine learning: The
+role of uniqueness and target similarity}
+\author{Pengyong Li, Yuquan Li, Chang-Yu Hsieh, Shengyu Zhang, Xianggen Liu, Huanxiang Liu, Sen Song, Xiaojun Yao, TrimNet: learning molecular representation from triplet messages for biomedicine, Briefings in Bioinformatics, Volume 22, Issue 4, July 2021, bbaa266, https://doi.org/10.1093/bib/bbaa266} 
+
+\begin{abstract}
+Computational methods accelerate drug discovery and play an important role in biomedicine, such as molecular
+property prediction and compound–protein interaction (CPI) identification. A key challenge is to learn useful molecular
+representation. In the early years, molecular properties are mainly calculated by quantum mechanics or predicted by
+traditional machine learning methods, which requires expert knowledge and is often labor-intensive. Nowadays, graph
+neural networks have received significant attention because of the powerful ability to learn representation from graph data.
+Nevertheless, current graph-based methods have some limitations that need to be addressed, such as large-scale
+parameters and insufficient bond information extraction. Results: In this study, we proposed a graph-based approach and
+employed a novel triplet message mechanism to learn molecular representation efficiently, named triplet message
+networks (TrimNet). We show that TrimNet can accurately complete multiple molecular representation learning tasks with
+significant parameter reduction, including the quantum properties, bioactivity, physiology and CPI prediction. In the
+experiments, TrimNet outperforms the previous state-of-the-art method by a significant margin on various datasets.
+Besides the few parameters and high prediction accuracy, TrimNet could focus on the atoms essential to the target
+properties, providing a clear interpretation of the prediction tasks. These advantages have established TrimNet as a
+powerful and useful computational tool in solving the challenging problem of molecular representation learning.
+Availability: The quantum and drug datasets are available on the website of MoleculeNet: http://moleculenet.ai. The source
+code is available in GitHub: https://github.com/yvquanli/trimnet. Contact: xjyao@lzu.edu.cn, songsen@tsinghua.edu.cn
+\end{abstract}
+
+\setboolean{displaycopyright}{false} %copyright statement should not display in the  supplementary document
+
+\begin{document}
+
+\maketitle
+
+\section*{Keywords}
+
+deep learning; molecular representation; molecular property; compound–protein interaction; computational
+method; graph neural networks
+
+
+\section*{Summary}
+The aim of this paper is to devise a new method using triplet message mechanism to learn molecular representations. This graph based approach has been named as TrimNet.
+
+\subsection*{Past methods}
+Previously different computational methods have been used for :
+\begin{enumerate}
+    \item Prediction of molecular properties
+    \item Identifying the interactions between drugs and their proteins
+    \item For finding the molecular structure DFT(density functional theory) was used but it was slow as it required hours and days for the calculation of molecular properties.
+    \item Various ML methods such as decision trees, random forests, support vector machines, k-nearest neighbors have been used for in silico prediction of molecular properties. These methods consume less time but they still have space for improvement.
+\end{enumerate}
+
+\subsection*{Related work}
+Many DL (deep learning) methods have shown exceptional performance in the prediction of molecular properties and have been divided into :
+\begin{enumerate}
+    \item Graph based
+    Graph based methods use GNN(graph neural networks) for prediction
+    \item Sequence based 
+   Sequence based approaches implement CNN(convolutional neural network) or RNN (recurrent neural network) for the prediction.
+\end{enumerate}
+An author compared graph based with sequence based methods on different data sets. Graph based models and MPNN (message passing neural networks) excelled. In MPNN a huge number of parameters are brought on the edge this could result in a lack of edge information extraction along with the number of parameters, hindering the performance of the model. To solve this paper presents TrimNet for learning the molecular representations. 
+
+\section*{Solution}
+\begin{enumerate}
+    \item Model presented in this paper was accessed for several properties such as :
+    \begin{enumerate}
+     \item molecular properties
+     \item  quantum properties
+     \item bio-activity
+     \item  physiology
+    \end{enumerate}
+\item Many datasets like QM9, MUV, HIV, BACE, Tox21, ToxCast, SIDER, ClinTox, Human and C.elegan have been used in this work. The data set was balanced with negative and positive samples. 
+\item A triplet edge network was used for reducing the computational cost and increase the performance. This network collects the information from the neighbours as well.
+\item For training the model batch gradient descent and error back-propagation algorithms were used. To avoid over fitting of the model, dropout and weight decay were the methods implemented for regularization. 
+\item PyTorch was used for the model. V100 and TITAN Black graphic cards were used for the training and testing purposes. 
+\item In the model a graph structure is used for the representation of features. This model achieved  state-of-the-art performance for six out of eight data sets in testing.
+\item Prediction of CPI is an important feature and the model was evaluated while using a previous approach and after comparison this model showed improved results.  
+\item TrimNet showed remarkable results for molecular representations another amazing feature of TrimNet includes lessened number of parameters. 
+\end{enumerate}
+
+\section*{Deficits}
+\begin{enumerate}
+\item Computation complexity(time) was more than MPNN.
+\item No discussion related to future work. 
+\end{enumerate}
+
+\section*{References} 
+
+ 1.Bahdanau D, Cho K, Bengio Y, et al. Neural machine translation by jointly learning to align and translate. In: International
+Conference on Learning Representations, Banff, Canada: ICLR
+Press, 2015.
+
+2. Breiman L. Random forests. Mach Learn 2001; 45(1): 5–32
+
+3. Butler KT, Davies DW, Cartwright H, et al. Machine learning
+for molecular and materials science. Nature 2018; 559(7715):
+547–55.
+
+4. Chen D, Lin Y, Li W, Et al. Measuring and relieving the
+over-smoothing problem for graph neural networks from the
+topological view. In: AAAI Conference on Artificial Intelligence,
+New York, Palo Alto, CA, USA: AAAI Press, 2020, 3438–3445.
+
+5. Chen R, Liu X, Jin S, et al. Machine learning for drug-target
+interaction prediction. Molecules 2018; 23(9): 2208.
+\end{document}

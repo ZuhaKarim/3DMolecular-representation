@@ -1,0 +1,88 @@
+\documentclass[12pt]{osa-supplemental-document}
+\setboolean{shortarticle}{false}
+
+\title{Pushing the Boundaries of Molecular Representation for Drug Discovery with the Graph Attention Mechanism}
+\author{Xiong, Zhaoping & Wang, Dingyan & Liu, Xiaohong & Feisheng, Zhong & Wan, Xiaozhe & Li, Xutong & Li, Zhaojun & Luo, Xiaomin & Chen, Kaixian & Jiang, H. & Zheng, Mingyue. (2019). Pushing the boundaries of molecular representation for drug discovery with graph attention mechanism. Journal of Medicinal Chemistry. 63. 10.1021/acs.jmedchem.9b00959} 
+
+\begin{abstract}
+Hunting for chemicals with favorable pharmacological, toxicological, and pharmacokinetic properties
+remains a formidable challenge for drug discovery. Deep
+learning provides us with powerful tools to build predictive
+models that are appropriate for the rising amounts of data, but
+the gap between what these neural networks learn and what
+human beings can comprehend is growing. Moreover, this gap
+may induce distrust and restrict deep learning applications in
+practice. Here, we introduce a new graph neural network
+architecture called Attentive FP for molecular representation that uses a graph attention mechanism to learn from relevant drug
+discovery data sets. We demonstrate that Attentive FP achieves state-of-the-art predictive performances on a variety of data sets
+and that what it learns is interpretable. The feature visualization for Attentive FP suggests that it automatically learns nonlocal
+intramolecular interactions from specified tasks, which can help us gain chemical insights directly from data beyond human
+perception.
+\end{abstract}
+
+\setboolean{displaycopyright}{false} %copyright statement should not display in the  supplementary document
+
+\begin{document}
+
+\maketitle
+
+\section*{Keywords}
+
+deep learning; molecular representation; graph neural networks
+
+
+\section*{Summary}
+The goal of this paper is offer Attentive FP for molecular representation, it is a new graph neural network architecture which uses graph attention mechanism.
+
+For molecular structures, efficient medicinal chemistry is dependent on associative thinking and pattern identification.
+ecause molecular structures are typically made up of many-body interactions and complex electrical configurations, developing a full depiction of them is a difficult task. 
+
+\subsection*{Past methods}
+A vast amount of data on the biological impacts of chemical substances has been gathered and made publicly available in recent years.
+\begin{enumerate}
+    \item  Thanks to recent rapid advancements in high-performance computing, high class quantum chemical calculations have benefited many researchers.
+    \item Over 5000 molecular descriptors have been created up till now.
+    \item Feature engineering for these chemical descriptors has been the focus of traditional machine learning algorithms for QSAR/QSPR. Their purpose is to pick a subset of relevant descriptors to use in model building. There are two types of molecular representations: graph-based and geometry-based.
+    \item In graph-based approach only information on the topological arrangement of atoms is used.
+    \item Molecular geometry information, such as bond lengths, bond angles, and torsional angles, is used in geometry-based representations.
+\end{enumerate}
+
+\section*{Solution}
+\begin{enumerate}
+  \item In this work graph attention mechanism is used. A method can use an attention mechanism to focus on task-relevant elements of a neural network.
+  \item The basic idea behind employing the attention mechanism on a graph is to get a context vector for the target node by focusing on its neighbors and immediate surroundings. 
+  \item The model is called Attentive FP.
+\end{enumerate}
+\section*{References} 
+ REFERENCES
+(1) Schneider, G. Mind and Machine in Drug Design. Nat. Mach.
+Intell. 2019, 1 (3), 128−130.
+
+(2) Gaulton, A.; Hersey, A.; Nowotka, M.; Bento, A. P.; Chambers,
+J.; Mendez, D.; Mutowo, P.; Atkinson, F.; Bellis, L. J.; Cibrian-Uhalte, ́
+E.; Davies, M. The ChEMBL Database in 2017. Nucleic Acids Res.
+2017, 45 (D1), D945−D954.
+(3) Huang, R.; Xia, M.; Sakamuru, S.; Zhao, J.; Shahane, S. A.;
+Attene-Ramos, M.; Zhao, T.; Austin, C. P.; Simeonov, A. Modelling
+the Tox21 10 K Chemical Profiles for in Vivo Toxicity Prediction and
+Mechanism Characterization. Nat. Commun. 2016, 7, 10425.
+(4) Kuhn, M.; Letunic, I.; Jensen, L. J.; Bork, P. The SIDER
+Database of Drugs and Side Effects. Nucleic Acids Res. 2016, 44 (D1),
+D1075−D1079.
+(5) Bolton, E. E.; Wang, Y.; Thiessen, P. A.; Bryant, S. H. PubChem:
+Integrated Platform of Small Molecules and Biological Activities.
+Annu. Rep. Comput. Chem. 2008, 4, 217.
+(6) Wang, Y.; Xiao, J.; Suzek, T. O.; Zhang, J.; Wang, J.; Zhou, Z.;
+Han, L.; Karapetyan, K.; Dracheva, S.; Shoemaker, B. A.; Bolton, E.
+PubChem’s BioAssay Database. Nucleic Acids Res. 2012, 40 (D1),
+D400−D412.
+(7) Butler, K. T.; Davies, D. W.; Cartwright, H.; Isayev, O.; Walsh,
+A. Machine Learning for Molecular and Materials Science. Nature
+2018, 559 (7715), 547−555.
+(8) Altae-Tran, H.; Ramsundar, B.; Pappu, A. S.; Pande, V. Low
+Data Drug Discovery with One-Shot Learning. ACS Cent. Sci. 2017, 3
+(4), 283−293.
+(9) Gupta, A.; Zou, J. Feedback GAN for DNA Optimizes Protein
+Functions. Nat. Mach. Intell. 2019, 1 (2), 105−111.
+
+\end{document}
