@@ -1,0 +1,2 @@
+conda activate pymolenv3_7
+pymol -R
